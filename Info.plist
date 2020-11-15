@@ -13,7 +13,7 @@
 	<key>CFBundleIconFile</key>
 	<string>DTerm</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.decimus.dterm</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -54,12 +54,12 @@
 	</dict>
 	<key>LSUIElement</key>
 	<string>1</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>You need to allow DTerm access to SystemEvents or it will not be able to identify the current working directory.</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2011 Decimus Software, Inc.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>You need to allow DTerm access to SystemEvents or it will not be able to identify the current working directory.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
