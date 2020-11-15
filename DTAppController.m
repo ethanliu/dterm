@@ -53,6 +53,8 @@ OSStatus DTHotKeyHandler(EventHandlerCallRef nextHandler,EventRef theEvent, void
 	signal(SIGPIPE, SIG_IGN);
 	
 	// Set some environment variables for our child processes
+    // https://github.com/muhqu/dterm/pull/19
+    setenv("TERM", "xterm-256color", 1);
 	setenv("TERM_PROGRAM", "DTerm", 1);
 	setenv("TERM_PROGRAM_VERSION", [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"] cStringUsingEncoding:NSASCIIStringEncoding], 1);
 	
@@ -170,7 +172,7 @@ OSStatus DTHotKeyHandler(EventHandlerCallRef nextHandler,EventRef theEvent, void
 }
 
 - (void)loadHotKeyFromUserDefaults {
-	KeyCombo myHotKey = { NSCommandKeyMask | NSShiftKeyMask, 36 /* return */ };
+    KeyCombo myHotKey = { NSEventModifierFlagCommand | NSEventModifierFlagShift, 36 /* return */ };
 	
 	NSDictionary* hotKeyDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"DTHotKey"];
 	NSNumber* newFlags = hotKeyDict[@"flags"];
