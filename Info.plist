@@ -20,8 +20,6 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>CFBundleVersion</key>
-	<string>REVISION</string>
 	<key>CFBundleShortVersionString</key>
 	<string>REVISION_PUBLIC</string>
 	<key>CFBundleSignature</key>
@@ -39,14 +37,16 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>REVISION</string>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.5.0</string>
+	<string>10.6.0</string>
 	<key>LSMinimumSystemVersionByArchitecture</key>
 	<dict>
 		<key>i386</key>
-		<string>10.5.0</string>
+		<string>10.6.0</string>
 		<key>ppc</key>
-		<string>10.5.0</string>
+		<string>10.6.0</string>
 		<key>ppc64</key>
 		<string>10.6.0</string>
 		<key>x86_64</key>
@@ -58,6 +58,8 @@
 	<string>Copyright © 2011 Decimus Software, Inc.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>You need to allow DTerm access to SystemEvents or it will not be able to identify the current working directory.</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
